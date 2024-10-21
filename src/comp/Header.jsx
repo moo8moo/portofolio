@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css"
 import { useState } from "react";
 export default function Header() {
-    let[mood,setmood]=useState({n:1,stat:true,rotated:true});
+    let[mood,setmood]=useState({n:1,stat:true,rotated:false});
 
     function addanimation(e){
        
@@ -33,7 +33,7 @@ export default function Header() {
             <button className=" btn_header  " onClick={(e)=>{
                 let target=e.currentTarget;
                 target.style.transition='transform 700ms';
-                if (!mood.rotated) {
+                if (mood.rotated===false) {
                     target.style.transform = 'rotateY(180deg)';
                   } else {
                     target.style.transform = 'rotateY(0deg)';
