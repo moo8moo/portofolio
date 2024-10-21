@@ -3,21 +3,25 @@
   /* القيمة الافتراضية: أسود */
   --g: #ffffff;
   --Ccont: #414141;
+  --sh:#00e1ff76;
+  --trans:0ms;
 }
 
 body {
   background-color: var(--body);
   color: var(--g);
+  transition: var(--trans);
 }
 
 .contaner {
   width: 80%;
   margin: auto;
   margin-top: 40px;
-  border: solid 1px rgba(0, 218, 233, 0.211);
+  border: solid 1px rgba(0, 218, 233, 0.524);
   padding: 10px;
   border-radius: 10px;
   background-color: var(--Ccont);
+  transition: var(--trans);
 }
 
 .border {
@@ -26,4 +30,7 @@ body {
 
 .flex {
   display: flex;
+}
+test{
+  color: #0000003a;
 }
