@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './index.css'
 import Header from "./comp/Header"
-import Hero from "./comp/hero"
+import Hero from "./comp/Hero"
 function App() {
 
 
