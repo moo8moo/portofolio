@@ -1,0 +1,22 @@
+
+
+.p_hero{
+    color:var(--p);
+}
+.left_hero{
+    margin: 50px 40px 50px 10px;
+}
+.img{
+    border-radius: 50%;
+    box-shadow: 1px 1px 25px 1px rgba(0, 249, 245, 0.359);
+    cursor: pointer;
+}
+.img:hover{
+    box-shadow: 1px 1px 25px 15px rgba(0, 249, 245, 0.321);
+    transition: 300ms;
+
+}
+.animation_hero{
+    margin-top: 50px;
+    width: 400px;
+}

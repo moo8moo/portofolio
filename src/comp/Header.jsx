@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 export default function Header() {
   let [mood, setmood] = useState({ n: 1, meneu: false, rotated: false });
-  let [replac, setreplace] = useState({ body: '#1d1d1d', g: '#ffffff', Ccont: '#414141', sh: '#00e1ff76',trans:'0ms' })
+  let [replac, setreplace] = useState({ body: '#1d1d1d', g: '#ffffff', Ccont: '#414141', sh: '#00e1ff76',trans:'0ms' ,p:''})
   useEffect(() => {
     // تغيير قيمة متغير CSS عند تغيير الحالة
     document.documentElement.style.setProperty('--body', replac.body);
@@ -12,6 +12,8 @@ export default function Header() {
     document.documentElement.style.setProperty('--Ccont', replac.Ccont);
     document.documentElement.style.setProperty('--sh', replac.sh);
     document.documentElement.style.setProperty('--trans', replac.trans);
+    document.documentElement.style.setProperty('--p', replac.p);
+
 
   }, [replac]);
   return (
@@ -51,7 +53,6 @@ export default function Header() {
         } else {
           target.style.transform = 'rotateY(0deg)';
         }
-        target.style.transition = 'transform 700ms';
 
         setTimeout(() => {
           if (mood.n === 1)
@@ -64,11 +65,12 @@ export default function Header() {
             setmood({ ...mood, n: 1, rotated: !mood.rotated });
           }
         }, 250)
+
         /*تم تظبيط لنيميشن الايقون */
 if(replac.body==='#1d1d1d')
-        setreplace({...replac,body:'white',g:"black",Ccont:'white',sh:'#0000003a',trans:'200ms'})
+        setreplace({...replac,body:'white',g:"black",Ccont:'white',sh:'#0000003a',trans:'400ms',p:'#000000da'})
 else
-setreplace({...replac,body:'#1d1d1d',g:"#ffffff",Ccont:'#414141',sh:'##00e1ff76',trans:'600ms'})
+setreplace({...replac,body:'#1d1d1d',g:"#ffffff",Ccont:'#414141',sh:'#00e1ff76',trans:'600ms',p:'#c0c0c0'})
 
 
       }}>

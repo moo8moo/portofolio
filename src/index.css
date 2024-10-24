@@ -5,12 +5,14 @@
   --Ccont: #414141;
   --sh:#00e1ff76;
   --trans:0ms;
+  --p:#c0c0c0;
 }
 
 body {
   background-color: var(--body);
   color: var(--g);
   transition: var(--trans);
+  font-family: sans-serif;
 }
 
 .contaner {
@@ -32,5 +34,5 @@ body {
   display: flex;
 }
 test{
-  color: #0000003a;
+  color: #31cef9da;
 }
