@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 export default function Header() {
   let [mood, setmood] = useState({ n: 1, meneu: false, rotated: false });
-  let [replac, setreplace] = useState({ body: '#1d1d1d', g: '#ffffff', Ccont: '#414141', sh: '#00e1ff76',trans:'0ms' ,p:''})
+  let [replac, setreplace] = useState({ body: '#1d1d1d', g: '#ffffff', Ccont: '#414141', sh: '#00e1ff76', trans: '0ms', p: '' })
   useEffect(() => {
     // تغيير قيمة متغير CSS عند تغيير الحالة
     document.documentElement.style.setProperty('--body', replac.body);
@@ -47,7 +47,7 @@ export default function Header() {
       </ul>
       <button className=" btn_header  " onClick={(e) => {
         let target = e.currentTarget;
-        target.style.transition = 'transform 700ms';
+        target.style.transition = 'transform 800ms';
         if (mood.rotated === false) {
           target.style.transform = 'rotateY(180deg)';
         } else {
@@ -67,10 +67,10 @@ export default function Header() {
         }, 250)
 
         /*تم تظبيط لنيميشن الايقون */
-if(replac.body==='#1d1d1d')
-        setreplace({...replac,body:'white',g:"black",Ccont:'white',sh:'#0000003a',trans:'400ms',p:'#000000da'})
-else
-setreplace({...replac,body:'#1d1d1d',g:"#ffffff",Ccont:'#414141',sh:'#00e1ff76',trans:'600ms',p:'#c0c0c0'})
+        if (replac.body === '#1d1d1d')
+          setreplace({ ...replac, body: 'white', g: "black", Ccont: 'white', sh: '#0000003a', trans: '400ms', p: '#000000da' })
+        else
+          setreplace({ ...replac, body: '#1d1d1d', g: "#ffffff", Ccont: '#414141', sh: '#00e1ff76', trans: '600ms', p: '#c0c0c0' })
 
 
       }}>
@@ -95,7 +95,7 @@ setreplace({...replac,body:'#1d1d1d',g:"#ffffff",Ccont:'#414141',sh:'#00e1ff76',
               <a href="">uses</a>
 
             </li>
-            <li style={{ border: "none", marginBottom:'15px' }}>
+            <li style={{ border: "none", marginBottom: '15px' }}>
               <a href="" >spaeking</a>
 
             </li >
